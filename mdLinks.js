@@ -1,20 +1,10 @@
-const fs = require("fs")
+import path from "path"
+import fs from "fs"
+import chalk from "chalk"
+//import answers from "."
 
-const someL = fs.readFile("Files/someLinks.md")
-
-console.log(someL)
-//
-// const os = require("os")
-
-// console.log(os.platform)
-// console.log(os.release)
-// console.log(os.totalmem)
-// console.log(path)
-
-// console.log(edad)
-// console.log(gatito)
-// console.table({
-//     os: os.platform(),
-//     version: os.release(),
-//     gatitoMem: os.totalmem(),
-// }) 
+//Si la ruta no es absoluta convertir a absoluta
+const convertToAbsolutePath = (file) => {
+    if (path.isAbsolute(file) === false) { return path.resolve(file) }
+}
+console.log(convertToAbsolutePath)

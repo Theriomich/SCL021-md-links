@@ -1,22 +1,28 @@
+import welcome from "./welcome.js"
+import inquirer from "inquirer"
+import path from "path"
+import fs from "fs"
+import chalk from "chalk"
 
-// module.exports = (gatito) => {
+const yellow = chalk.bold.yellow
+console.log(welcome)
+
+setTimeout(() => {
+    inquirer.prompt({
+
+        name: "archivo",
+        message: "Ingrese la ruta del archivo",
+        default: "C:/ Users /  carpeta / doc.md"
 
 
-//   // ...
-// };
+    }).then(answers => {
+        console.log("Answer: ", answers)
+    }
+    )
 
-let gatito = "lindo"
-let edad = 1
-let color = "amarillo"
-let comidas = ["pellet", "tarro"]
+}, 3000)
 
-const grupo = {
-    gatito,
-    edad,
-    color,
-    comidas
-}
 
-module.exports = grupo
 
+export default answers
 
