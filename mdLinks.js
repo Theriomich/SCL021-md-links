@@ -1,10 +1,20 @@
 import path from "path"
 import fs from "fs"
 import chalk from "chalk"
+//import fs from "fs"
+
+//Comprobar si existe un archivo
+const verificateFileExist = (file) => {
+    if (fs.existsSync(file)) { return fs.existsSync(file) }
+
+
+}
+console.log(verificateFileExist("Files/info.txt"))
+
 
 
 //Si la ruta no es absoluta convertir a absoluta
-export const convertToAbsolutePath = (file) => {
+const convertToAbsolutePath = (file) => {
     if (path.isAbsolute(file) === false) { return path.resolve(file) }
     else { return file }
 }
@@ -20,8 +30,9 @@ const fileRead = (pathToRead) => {
     const regExpHttp = /(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/igm;
     //Si el archivo contiene links convertir sus propiedades en un objeto
     const parseFile = path.parse(file)
-    if (file.includes(regExpHttp)) { return parseFile }
+    console.log(file.match(regExpHttp))
 
+    if (file.match(regExpHttp)) { return parseFile }
 
 
 
@@ -38,9 +49,9 @@ const fileRead = (pathToRead) => {
     // return link
 
 }
-const func = { convertToAbsolutePath }
 
-export { func }
+
+export { verificateFileExist, convertToAbsolutePath }
 
 //console.log(parseFile("Files/lala.md"))
 
