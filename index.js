@@ -3,6 +3,7 @@ import inquirer from "inquirer"
 import path from "path"
 import fs from "fs"
 import chalk from "chalk"
+import { convertToAbsolutePath } from "./mdLinks.js"
 
 const yellow = chalk.bold.yellow
 console.log(welcome)
@@ -16,7 +17,12 @@ setTimeout(() => {
 
 
     }).then(answers => {
-        console.log("Answer: ", answers)
+        if (answers === path) {
+            return console.log("Answer:", convertToAbsolutePath(answers))
+        }
+        //else if (answers === path.isAbsolute) { return console.log("Answer:", answers) }
+        else { return chalk.bgRed("Debe ingresar una ruta valida") }
+        //console.log("Answer: ", (answers));
     }
     )
 
@@ -24,5 +30,5 @@ setTimeout(() => {
 
 
 
-export default answers
+
 

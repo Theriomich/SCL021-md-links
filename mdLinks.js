@@ -4,7 +4,7 @@ import chalk from "chalk"
 
 
 //Si la ruta no es absoluta convertir a absoluta
-const convertToAbsolutePath = (file) => {
+export const convertToAbsolutePath = (file) => {
     if (path.isAbsolute(file) === false) { return path.resolve(file) }
     else { return file }
 }
@@ -24,6 +24,7 @@ const fileRead = (pathToRead) => {
 
 
 
+
     // let resul =
     //     let link = []
     // while ((result = regExpHttp.exec(parseFile)) !== null) {
@@ -37,8 +38,13 @@ const fileRead = (pathToRead) => {
     // return link
 
 }
+const func = { convertToAbsolutePath }
 
-console.log(parseFile("Files/lala.md"))
+export { func }
+
+//console.log(parseFile("Files/lala.md"))
+
+
 
 
 
