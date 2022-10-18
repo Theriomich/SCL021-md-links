@@ -2,7 +2,8 @@ import welcome from "./welcome.js"
 import inquirer from "inquirer"
 import path from "path"
 import chalk from "chalk"
-import { verificateFileExist, convertToAbsolutePath } from "./mdLinks.js"
+import { verificateFileExist, convertToAbsolutePath, searchMd, fileRead } from "./mdLinks.js"
+
 
 const yellow = chalk.bold.yellow
 console.log(welcome)
@@ -15,16 +16,19 @@ setTimeout(() => {
         default: "C:/ Users /  carpeta / doc.md"
 
 
-    }).then(answers => {
-        //console.log({ answers })
-        if (answers.archivo === path) {
-            console.log("Answer:", verificateFileExist(answers.archivo))
+    }).then((answers => {
+        if (verificateFileExist(answers.archivo) === true) {
+            console.log("Answer:", convertToAbsolutePath(answers.archivo))
         }
-        //else if (answers === path.isAbsolute) { return console.log("Answer:", answers) }
-        else { chalk.redBright("Debe ingresar una ruta valida") }
-        //console.log("Answer: ", (answers));
-    }
-    )
+
+        else { console.log(chalk.redBright("Debe ingresar una ruta valida")) }
+
+        if (searchMd(answers.archivo) === false && verificateFileExist(answers.archivo) === true) { console.log(chalk.yellowBright("Archivos MD no encontrados")) }
+
+
+
+    }))
+
 
 }, 3000)
 

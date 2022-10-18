@@ -7,11 +7,7 @@ import chalk from "chalk"
 const verificateFileExist = (file) => {
     if (fs.existsSync(file)) { return fs.existsSync(file) }
 
-
 }
-console.log(verificateFileExist("Files/info.txt"))
-
-
 
 //Si la ruta no es absoluta convertir a absoluta
 const convertToAbsolutePath = (file) => {
@@ -29,12 +25,21 @@ const fileRead = (pathToRead) => {
     const file = fs.readFileSync(pathToRead, "uft8")
     const regExpHttp = /(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/igm;
     //Si el archivo contiene links convertir sus propiedades en un objeto
-    const parseFile = path.parse(file)
-    console.log(file.match(regExpHttp))
+    const parseFile = path.parse(pathToRead)
+    console.log(pathToRead.match(regExpHttp))
 
-    if (file.match(regExpHttp)) { return parseFile }
+    if (pathToRead.match(regExpHttp)) { return parseFile }
+
+    console.log(parseFile("Files/someLinks.md"))
 
 
+
+    // function detectURLs(message) {
+    //     var urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g;
+    //     return message.match(urlRegex)
+
+    // }
+    // console.log(message("Files/someLinks.md"))
 
     // let resul =
     //     let link = []
@@ -51,9 +56,9 @@ const fileRead = (pathToRead) => {
 }
 
 
-export { verificateFileExist, convertToAbsolutePath }
+export { verificateFileExist, convertToAbsolutePath, searchMd, fileRead }
 
-//console.log(parseFile("Files/lala.md"))
+
 
 
 
