@@ -1,9 +1,11 @@
-# MD Link Finder ## De Michelle Cifuentes
+# MD Link Finder
 
-![MD-LINK-FINDER](img\MD LINK FINDER.PNG)
+## De Michelle Cifuentes
+
+![MD-LINK-FINDER](img/mdlinkfinder.png)
 
 ### Diagrama de Flujo
 
-![Diagrama](img/Diagrama de flujo img.jpg)
+![Diagrama](src/Files/img/Diagrama de flujo img.jpg)
 
 ### Resumen del proyecto
