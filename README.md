@@ -35,7 +35,7 @@ Si el usuario ingreso una ruta existente de tipo MD, el programa la leera y most
 
 ![Se encontraron los siguientes Links](img/seencontraronlossiguienteslinksensuarchivo.png)
 
-Luego de mostrar los links encontrados mostrara sus estados.En caso de estar funcionando será el status 200.
+Luego de mostrar los links encontrados mostrara sus estados. En caso de estar funcionando será 200 el status.
 
 ![Links Encontrados](img/loslinks.png)
 
