@@ -59,7 +59,7 @@ const linkRead = (pathToRead) => {
 
 const validateLinks = (arrlinks) => {
   console.log({ arrlinks });
-  const arrayPromesas = arrlinks.forEach((link) => {
+  const arrayLink = arrlinks.forEach((link) => {
     fetch(link)
       .then((res) => {
         const statusText = res.status == 200 ? res.statusText : "FAIL";
@@ -77,7 +77,6 @@ const validateLinks = (arrlinks) => {
         });
       });
   });
-  //return arrayPromesas;
 };
 
 //(links) => {
