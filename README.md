@@ -26,24 +26,25 @@ Si el usuario no ingresa un archivo se le indieca que debe ingresar una ruta vá
 
 ![Ingrese ruta Valida](img/debeingresarrutavalida.png)
 
-Si el usuario ingreso una ruta existente pero que no es MD se dira que no existen archivos MD. En todos los casos que existan archivos transforma las rutas en absolutas.
+Si el usuario ingreso una ruta existente pero que no es de tipo MD la consola mostrará que no existen archivos MD.
+En todos los casos que existan archivos transformará las rutas a absolutas.
 
 ![Archivo MD no encontrados](img/archivosMdnoencontrados.png)
 
-Si el usuario ingreso una ruta existente y que es un archivo de tipo MD, el programa la leera y mostrara los Links encontrados:
+Si el usuario ingreso una ruta existente de tipo MD, el programa la leera y mostrara los Links encontrados:
 
 ![Se encontraron los siguientes Links](img/seencontraronlossiguienteslinksensuarchivo.png)
 
-Luego de mostrar los links encontrados mostrara sus estados que en caso de estar funcionando mostrará el status 200.
+Luego de mostrar los links encontrados mostrara sus estados.En caso de estar funcionando será el status 200.
 
 ![Links Encontrados](img/loslinks.png)
 
 ![Status](img/estadoslinkOk.png)
 
-Y en caso de no saber muestra Undefined y el mensaje sera de Fallo:
+Y en caso de no reconocer el Link muestra Undefined y el mensaje será Fail
 
 ![Undefined](img/undefinedstat.PNG)
 
-En caso de no estar Funcionando el Link el error del status que muestra será 404 y el mensaje sera FAIL.
+En caso de no estar funcionando el Link el error que mostrará el status será 404 y el mensaje será FAIL.
 
 ![Undefined](img/error404.png)
