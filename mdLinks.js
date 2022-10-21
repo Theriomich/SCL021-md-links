@@ -1,8 +1,6 @@
 import path from "path";
 import fs from "fs";
 import chalk from "chalk";
-import { url } from "inspector";
-import https from "https";
 import fetch from "node-fetch";
 
 //Comprobar si existe un archivo
@@ -46,27 +44,23 @@ const linkRead = (pathToRead) => {
   }
   return newLinks;
 };
-
-// const countLinks = (links) => {
-//   let count = 0;
-//   links.forEach((link, index) => {
-//     if (links.indexOf(link) === index) {
-//       count++;
-//     }
-//   });
-//   return count;
-// };
-
+//Valida que los Links esten funcionando
 const validateLinks = (arrlinks) => {
-  console.log({ arrlinks });
+  console.log({ arrlinks });  
+  console.log(chalk.bgGreenBright("Estos son los estados de sus Links:"))
+
+  setTimeout(() => {
   const arrayLink = arrlinks.forEach((link) => {
     fetch(link)
       .then((res) => {
         const statusText = res.status == 200 ? res.statusText : "FAIL";
+     
+
         console.log({
           link: link,
           status: res.status,
           message: statusText,
+         
         });
       })
       .catch((rej) => {
@@ -74,30 +68,12 @@ const validateLinks = (arrlinks) => {
           link: link,
           status: rej.status,
           message: "Fail",
-        });
-      });
+          });
+           });
   });
+},3000);
 };
 
-//(links) => {
-//   https.get(res.forEach((links) => {
-//    if (res.statusCode === 200);
-//  { return "si"}
-// else
-//   {
-//    return "No"
-//   };
-// }
-// };
-//   let request = FileReader.readAsDataURL();
-//   //new https();
-//   source.forEach((url) => {
-//     if (request.statusCode(url) === 200) {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   });
 
 export {
   verificateFileExist,
@@ -105,5 +81,5 @@ export {
   searchMd,
   linkRead,
   validateLinks,
-  // countLinks,
+ 
 };
