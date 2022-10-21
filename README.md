@@ -14,27 +14,29 @@ Aqui tengo que poner como...
 
 ### Resumen del proyecto
 
-En este proyecto es una libreria pensada en programadores, en el que puedan comprobar si un archivo de tipo MD tiene links y cual es el estado de esos Links, si estan funcionando o no.
+En este proyecto es una libreria pensada para programadores, en el que puedan comprobar si un archivo de tipo MD tiene links y cual es el estado de esos Links (si estan funcionando o no).
 
-![Ingresar la Ruta](img/ingreselarutadelarchivo.png)
+### Explicación de la Libreria
 
 En primera instancia se le pide al usuario que ingrese la ruta del archivo a leer.
 
-![Ingrese ruta Valida](img/debeingresarrutavalida.png)
+![Ingresar la Ruta](img/ingreselarutadelarchivo.png)
 
 Si el usuario no ingresa un archivo se le indieca que debe ingresar una ruta válida
 
-![Archivo MD no encontrados](img/archivosMdnoencontrados.png)
+![Ingrese ruta Valida](img/debeingresarrutavalida.png)
 
 Si el usuario ingreso una ruta existente pero que no es MD se dira que no existen archivos MD. En todos los casos que existan archivos transforma las rutas en absolutas.
 
-![Se encontraron los siguientes Links](img/seencontraronlossiguienteslinksensuarchivo.png)
+![Archivo MD no encontrados](img/archivosMdnoencontrados.png)
 
 Si el usuario ingreso una ruta existente y que es un archivo de tipo MD, el programa la leera y mostrara los Links encontrados:
 
-![Links Encontrados](img/loslinks.png)
+![Se encontraron los siguientes Links](img/seencontraronlossiguienteslinksensuarchivo.png)
 
-Luegp de mostrar los links encontrados mostrara sus estados que en caso de estar funcionando sera el status 200.
+Luego de mostrar los links encontrados mostrara sus estados que en caso de estar funcionando mostrará el status 200.
+
+![Links Encontrados](img/loslinks.png)
 
 ![Status](img/estadoslinkOk.png)
 
