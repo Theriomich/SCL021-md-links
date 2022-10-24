@@ -1,7 +1,15 @@
 {
-  "name": "md-links",
-  "version": "0.1.0",
-  "type": "module",
+  "name": "md-links-finder",  
+  "version": "0.1.1",
+  "author": {
+    "name":"Michelle Cifuentes Mankoch <m.ciifuentes.mankoch@gmail.com>"},
+  "description": "Una libreria que extrae los Links de un archivo MD y comprueba sus stats",
+  "keywords": ["MD","Links","Stats","Finder"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Theriomich"
+  },
+  "type": "module",  
   "engines": {
     "node": ">=16.x"
   },

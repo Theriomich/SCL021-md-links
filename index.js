@@ -40,11 +40,21 @@ setTimeout(() => {
         ) {
           console.log("Answer:", convertToAbsolutePath(answers.archivo));
           console.log(chalk.yellowBright("Archivos MD no encontrados"));
-        }
+        }  
+        
+        //Si es MD y no tiene Links
+      // else if ( searchMd(answers.archivo) === true &&
+      // verificateFileExist(answers.archivo) === true && linkRead(answers.archivo) === false )
+      //  {console.log(chalk.red("No se encontraron Links"));}
+
+
         //Si no hay archivo
        else {
         console.log(chalk.redBright("Debe ingresar una ruta valida"));
       }
+
+     
  
     });
+    
 }, 3000);
