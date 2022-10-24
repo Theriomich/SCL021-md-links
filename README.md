@@ -10,7 +10,8 @@
 
 ### Como instalar la libreria MD lInk Finder
 
-Aqui tengo que poner como...
+Se instala con el siguiente comando:
+npm i md-links-finder-theriomich
 
 ### Resumen del proyecto
 
