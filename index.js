@@ -8,7 +8,6 @@ import {
   linkRead,
   validateLinks,
 } from "./mdLinks.js";
-
 console.log(welcome);
 
 setTimeout(() => {

@@ -4,10 +4,8 @@ import chalk from "chalk";
 import fetch from "node-fetch";
 
 //Comprobar si existe un archivo
-const verificateFileExist = (file) => {
-  if (fs.existsSync(file)) {
-    return fs.existsSync(file);
-  }
+const verificateFileExist = (file) => {  
+    return fs.existsSync(file);  
 };
 
 //Si la ruta no es absoluta convertir a absoluta

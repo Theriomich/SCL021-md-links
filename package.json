@@ -1,6 +1,6 @@
 {
   "name": "md-links-finder-theriomich",  
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name":"Michelle Cifuentes Mankoch <m.ciifuentes.mankoch@gmail.com>"},
   "description": "Una libreria que extrae los Links de un archivo MD y comprueba sus stats",
@@ -13,6 +13,10 @@
   "engines": {
     "node": ">=16.x"
   },
+  "bin": {
+    "mdlinks": "./src/index.js"
+  },
+
   "dependencies": {
     "chalk": "^5.1.0",
     "inquirer": "^9.1.3",
